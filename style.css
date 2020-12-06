@@ -232,7 +232,6 @@ header .content .slider-arrow_right {
   width: 40px;
   height: 73px;
   position: relative;
-  z-index: 3;
 }
 
 header .content .slider-arrow_right:after {
@@ -254,7 +253,7 @@ header .content .slider-arrow_right:hover:after {
   border-right: 2px solid #8b7a6a;
 }
 
-header .carusel {
+header .content .carusel {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -266,10 +265,9 @@ header .carusel {
   position: absolute;
   bottom: 5%;
   margin: auto;
-  z-index: 3;
 }
 
-header .carusel .carusel_item {
+header .content .carusel .carusel_item {
   width: 12px;
   height: 12px;
   margin: 0 7px;
@@ -278,7 +276,7 @@ header .carusel .carusel_item {
   background-color: #999797;
 }
 
-header .carusel .carusel_item:hover {
+header .content .carusel .carusel_item:hover {
   border: 2px #d3c1ad solid;
   background-color: rgba(0, 0, 0, 0);
 }
