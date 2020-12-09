@@ -149,6 +149,7 @@ header{
             border: none;
             border-radius: 5px;
             box-shadow: 0 2px 0 1px #736357;
+            
           }
             button:hover{
                 background-color: #8b7a6a;
@@ -280,11 +281,43 @@ header{
           fill: #555555;
           stroke: #555555;
         }
+
+        .piece{
+          fill: #555555;
+          stroke: #555555;
+          width: 44px;
+          height: 44px;
+          animation-name: piece;
+          transform-origin: center center;
+          animation-duration: 8s;
+          animation-iteration-count: infinite;
+          animation-timing-function: linear;
+        }
+        
+       @keyframes piece {
+
+        from{ 
+         transform: rotate(0deg);
+        }
+        
+        to{
+         transform: rotate(360deg);
+        }
+      }
+
         .functions_item:hover{
        .sign{
          fill: #c7b299;
          stroke: #c7b299;
        }
+
+       .piece{
+         fill: #c7b299;
+         stroke: #c7b299;
+         animation-name: piece;
+         animation-play-state: paused;
+       }
+
        .functions_item:after{
         background-color: #c7b299;
        }
@@ -329,14 +362,64 @@ header{
           z-index: 1;
           right: 37%;
         }
+        .screen1:hover{
+          z-index: 3;
+          animation-name:screen1;
+          animation-duration: 0.3s;
+          animation-fill-mode: forwards;
+
+          @keyframes screen1{
+            from{
+              width: 770px;
+              height: 400px;
+            }
+            to{
+              width: 800px;
+              height: 430px;
+            }
+          }
+        }
         .screen2{
           position: absolute;
           z-index: 2;
+        }
+        .screen2:hover{
+          animation-name:screen2;
+          animation-duration: 0.3s;
+          animation-fill-mode: forwards;
+
+          @keyframes screen2{
+            from{
+              width: 770px;
+              height: 482px;
+            }
+            to{
+              width: 800px;
+              height: 512px;
+            }
+          }
         }
         .screen3{
           position: absolute;
           z-index: 1;
           left: 37%;
+        }
+        .screen3:hover{
+          z-index: 3;
+          animation-name:screen3;
+          animation-duration: 0.3s;
+          animation-fill-mode: forwards;
+
+          @keyframes screen3{
+            from{
+              width: 770px;
+              height: 400px;
+            }
+            to{
+              width: 800px;
+              height: 430px;
+            }
+          }
         }
         .wordpress{
           background: linear-gradient(to right, #211b19, #211b19, #4e3427);
@@ -383,4 +466,55 @@ header{
               background-color: #8b7a6a;
           }
      }
+    .projects{
+      text-align: center;
+      h2{
+        font-family: raleway, arial, sans-serif;
+        font-size: 30px;
+        font-weight: 600;
+        color: rgb(83, 83, 83);
+        margin: 0 auto;
+        padding-top: 60px;
+      }
+      p{
+        font-family: montserrat-medium, arial, sans-serif;
+        color: rgba(100, 100, 100, 0.575);
+        line-height: 28px;
+        font-size: 16px;
+        width: 800px;
+        margin: 0 auto;
+        padding-top: 15px;
+        padding-bottom: 30px;
+      }
+      .buttons{
+        display: flex;
+        margin: 0 auto;
+        max-width: 600px;
+        justify-content: space-around;
+        padding-bottom: 30px;
+      }
+      .buttons_item{
+        text-decoration: none;
+        border: 1px rgba(56, 56, 56, 0.13) solid;
+        border-radius: 5px;
+        padding: 3px 15px 3px 15px;
+        font-family: montserrat-medium, arial, sans-serif;
+        color: rgba(100, 100, 100, 0.719);
+        line-height: 28px;
+        font-size: 14px;
+      }
+      .buttons_item:hover{
+        background-color: #998675;
+        color:white;
+      }
+      .projects_content{
+        display: flex;
+        max-width: 1200px;
+        justify-content: space-around;
+      }
+      .projects_content_item{
+        width: 30%;
+      }
+     }
     }
+  
