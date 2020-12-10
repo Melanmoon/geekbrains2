@@ -11,6 +11,8 @@ header {
   background-image: url(img/photo.png);
   background-repeat: no-repeat;
   background-attachment: fixed;
+  background-size: cover;
+  background-position: center center;
 }
 
 header .navigation {
@@ -232,6 +234,7 @@ header .content .slider-arrow_right {
   width: 40px;
   height: 73px;
   position: relative;
+  z-index: 3;
 }
 
 header .content .slider-arrow_right:after {
@@ -253,7 +256,7 @@ header .content .slider-arrow_right:hover:after {
   border-right: 2px solid #8b7a6a;
 }
 
-header .content .carusel {
+header .carusel {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -265,9 +268,10 @@ header .content .carusel {
   position: absolute;
   bottom: 5%;
   margin: auto;
+  z-index: 3;
 }
 
-header .content .carusel .carusel_item {
+header .carusel .carusel_item {
   width: 12px;
   height: 12px;
   margin: 0 7px;
@@ -276,7 +280,7 @@ header .content .carusel .carusel_item {
   background-color: #999797;
 }
 
-header .content .carusel .carusel_item:hover {
+header .carusel .carusel_item:hover {
   border: 2px #d3c1ad solid;
   background-color: rgba(0, 0, 0, 0);
 }
@@ -346,9 +350,57 @@ main .functions .sign {
   stroke: #555555;
 }
 
+main .functions .piece {
+  fill: #555555;
+  stroke: #555555;
+  width: 44px;
+  height: 44px;
+  -webkit-animation-name: piece;
+          animation-name: piece;
+  -webkit-transform-origin: center center;
+          transform-origin: center center;
+  -webkit-animation-duration: 8s;
+          animation-duration: 8s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+}
+
+@-webkit-keyframes piece {
+  from {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@keyframes piece {
+  from {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
 main .functions .functions_item:hover .sign {
   fill: #c7b299;
   stroke: #c7b299;
+}
+
+main .functions .functions_item:hover .piece {
+  fill: #c7b299;
+  stroke: #c7b299;
+  -webkit-animation-name: piece;
+          animation-name: piece;
+  -webkit-animation-play-state: paused;
+          animation-play-state: paused;
 }
 
 main .functions .functions_item:hover .functions_item:after {
@@ -406,15 +458,110 @@ main .ideas .screen1 {
   right: 37%;
 }
 
+main .ideas .screen1:hover {
+  z-index: 3;
+  -webkit-animation-name: screen1;
+          animation-name: screen1;
+  -webkit-animation-duration: 0.3s;
+          animation-duration: 0.3s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+@-webkit-keyframes screen1 {
+  from {
+    width: 770px;
+    height: 400px;
+  }
+  to {
+    width: 800px;
+    height: 430px;
+  }
+}
+
+@keyframes screen1 {
+  from {
+    width: 770px;
+    height: 400px;
+  }
+  to {
+    width: 800px;
+    height: 430px;
+  }
+}
+
 main .ideas .screen2 {
   position: absolute;
   z-index: 2;
+}
+
+main .ideas .screen2:hover {
+  -webkit-animation-name: screen2;
+          animation-name: screen2;
+  -webkit-animation-duration: 0.3s;
+          animation-duration: 0.3s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+@-webkit-keyframes screen2 {
+  from {
+    width: 770px;
+    height: 482px;
+  }
+  to {
+    width: 800px;
+    height: 512px;
+  }
+}
+
+@keyframes screen2 {
+  from {
+    width: 770px;
+    height: 482px;
+  }
+  to {
+    width: 800px;
+    height: 512px;
+  }
 }
 
 main .ideas .screen3 {
   position: absolute;
   z-index: 1;
   left: 37%;
+}
+
+main .ideas .screen3:hover {
+  z-index: 3;
+  -webkit-animation-name: screen3;
+          animation-name: screen3;
+  -webkit-animation-duration: 0.3s;
+          animation-duration: 0.3s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+@-webkit-keyframes screen3 {
+  from {
+    width: 770px;
+    height: 400px;
+  }
+  to {
+    width: 800px;
+    height: 430px;
+  }
+}
+
+@keyframes screen3 {
+  from {
+    width: 770px;
+    height: 400px;
+  }
+  to {
+    width: 800px;
+    height: 430px;
+  }
 }
 
 main .ideas .wordpress {
@@ -475,5 +622,195 @@ main .ideas button {
 
 main .ideas button:hover {
   background-color: #8b7a6a;
+}
+
+main .projects {
+  text-align: center;
+}
+
+main .projects h2 {
+  font-family: raleway, arial, sans-serif;
+  font-size: 30px;
+  font-weight: 600;
+  color: #535353;
+  margin: 0 auto;
+  padding-top: 60px;
+}
+
+main .projects h3 {
+  font-family: raleway, arial, sans-serif;
+  font-size: 20px;
+  font-weight: 600;
+  color: #998675;
+}
+
+main .projects p {
+  font-family: montserrat-medium, arial, sans-serif;
+  color: rgba(100, 100, 100, 0.575);
+  line-height: 28px;
+  font-size: 16px;
+  width: 800px;
+  margin: 0 auto;
+  padding-top: 15px;
+  padding-bottom: 30px;
+}
+
+main .projects .buttons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 0 auto;
+  max-width: 600px;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  padding-bottom: 30px;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+main .projects .buttons_item {
+  text-decoration: none;
+  border: 1px rgba(56, 56, 56, 0.13) solid;
+  border-radius: 5px;
+  padding: 3px 15px 3px 15px;
+  font-family: montserrat-medium, arial, sans-serif;
+  color: rgba(100, 100, 100, 0.719);
+  line-height: 28px;
+  font-size: 14px;
+  margin: 0 10px 10px 0px;
+}
+
+main .projects .buttons_item:hover {
+  background-color: #998675;
+  color: white;
+}
+
+main .projects .projects_content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  max-width: 1200px;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin: 0 auto;
+}
+
+main .projects .projects_content_item {
+  width: 370px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin: 0 0 40px 0;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+main .projects .projects_text {
+  text-align: left;
+  padding: 15px 0 15px 20px;
+  background-color: #fbfaf8;
+}
+
+main .projects .projects_text:before {
+  content: "";
+  display: block;
+  position: absolute;
+  border: 13px solid transparent;
+  border-bottom: 13px solid #fbfaf8;
+  top: -5%;
+  left: 10%;
+}
+
+main .projects .projects_text p {
+  margin: 0;
+  width: auto;
+  padding: 10px 0 0 0;
+  font-size: 14px;
+}
+
+main .projects button {
+  width: 175px;
+  height: 50px;
+  font-size: 14px;
+  font-family: Raleway, arial, sans-serif;
+  font-weight: 800;
+  text-transform: uppercase;
+  color: white;
+  background-color: #998675;
+  border: none;
+  border-radius: 5px;
+  -webkit-box-shadow: 0 2px 0 1px #736357;
+          box-shadow: 0 2px 0 1px #736357;
+}
+
+main .projects button:hover {
+  background-color: #8b7a6a;
+}
+
+main .presentation {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 50px 0 0;
+  max-width: 100%;
+  height: 705px;
+  background-image: url(img/table.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+}
+
+main .presentation .presentation_content {
+  text-align: center;
+}
+
+main .presentation h2 {
+  font-family: raleway, arial, sans-serif;
+  font-size: 30px;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.94);
+  margin: 0 auto;
+  padding-top: 40px;
+}
+
+main .presentation p {
+  font-family: montserrat-medium, arial, sans-serif;
+  color: rgba(255, 255, 255, 0.94);
+  font-size: 16px;
+  max-width: 600px;
+  margin: 0 auto;
+  padding-top: 15px;
+  padding-bottom: 25px;
+}
+
+main .presentation .presentation_time {
+  font-family: montserrat-medium, arial, sans-serif;
+  color: #c2ae96;
+  line-height: 28px;
+  font-size: 14px;
+}
+
+main .presentation .play_circle {
+  opacity: 0.3;
+}
+
+main .presentation .play_icon {
+  fill: white;
+}
+
+main .presentation .play:hover .play_icon {
+  fill: #998675;
 }
 /*# sourceMappingURL=style.css.map */
