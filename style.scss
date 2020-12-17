@@ -783,4 +783,152 @@ main{
       fill: #c7b299;
     }
   }
+  .posts{
+    text-align: center;
+    h2{
+      font-family: raleway, arial, sans-serif;
+      font-size: 30px;
+      font-weight: 600;
+      color: rgb(83, 83, 83);
+      margin: 0 auto;
+      padding-top: 60px;
+    }
+
+    h3{
+      font-family: raleway, arial, sans-serif;
+      font-size: 20px;
+      font-weight: 600;
+      color: rgb(83, 83, 83);
+      margin: 20px 0 15px 0;
+    }
+
+    p{
+      font-family: montserrat-medium, arial, sans-serif;
+      color: rgba(100, 100, 100, 0.575);
+      line-height: 28px;
+      font-size: 16px;
+      width: 800px;
+      margin: 0 auto;
+      padding-top: 15px;
+      padding-bottom: 30px;
+    }
+
+    a{
+      font-family: montserrat, arial, sans-serif;
+      color: #cfaa7d;
+      text-decoration: none;
+      font-size: 14px;
+      font-weight: 600;
+    }
+
+    .posts_content{
+      display: flex;
+      justify-content: space-between;
+      margin: 0 auto;
+      max-width: 1200px;
+    }
+    .posts_item{
+      display: flex;
+      flex-direction: column;
+      width: 370px;
+      position: relative;
+    }
+    .posts_text{
+      text-align: left;
+      background-color: #ffffff;
+      height: 170px;
+      padding: 0 0 0 20px;
+
+      p{
+        color: rgb(83, 83, 83);
+        line-height: 22px;
+        font-size: 14px;
+        width: 350px;
+        padding: 0;
+        margin: 0 0 25px 0;
+      }
+
+    }
+    .post_dark{
+      background-color: rgba($color: #000000, $alpha: 0.7);
+      width: 370px;
+      height: 220px;
+      position: absolute;
+      display: none;
+      z-index: 1;
+    }
+
+    .calendar{
+      width: 50px;
+      height: 60px;
+      display: flex;
+      flex-direction: column;
+      position: absolute;
+      top: 5%;
+      left: 5%;
+      z-index: 2;
+    }
+
+    .calendar_top{
+      background-color: #363636;
+      margin: 0;
+      padding: 0;
+      width: auto;
+      color: white;
+      border-radius: 5px 5px 0 0;
+    }
+
+    .calendar_bot{
+      background-color: #252525;
+      margin: 0;
+      padding: 0;
+      width: auto;
+      color: white;
+      font-size: 12px;
+      border-radius: 0 0 5px 5px;
+    }
+
+    .posts_icons{
+      display: flex;
+      justify-content: center;
+      margin: 30px 0 50px 0;
+    }
+    
+    .post_icon{
+      fill: #c5c5c5;
+    }
+
+    .icon_item{
+      margin: 0 3px 0 3px;
+    }
+
+    .icon_item:hover{
+      .post_icon{
+        fill: #c7b299;
+      }
+
+    }
+    
+    .posts_item:hover{
+      .posts_text{
+        background-color: #362f2d;
+      }
+      .posts_text p{
+        color: rgb(207, 207, 207);
+      }
+      h3{
+        color: #c7b299;
+      }
+      .post_dark{
+        display: inline;
+      }
+      .calendar_top{
+        background-color: #c7b299;
+      }
+      .calendar_bot{
+        background-color: #a48d72;
+      }
+    }
+  }
+
 }
