@@ -934,6 +934,9 @@ main{
 
 footer{
 
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
   .partners{
     background-image: url(img/mountains.png);
     background-repeat: no-repeat;
@@ -959,17 +962,23 @@ footer{
     display: flex;
     align-items: center;
     justify-content: center;
+    
+    h3{
+      font-family: raleway, arial, sans-serif;
+      font-size: 24px;
+      font-weight: 600;
+      color: white;
+      margin: 20px 0 15px 0;
+    }
 
     p{
-      font-size: 16px;
+      font-size: 14px;
       font-family: montserrat, arial, sans-serif;
       font-weight: 600;
-      margin-top: 12px;
       color: rgba(192, 192, 192, 0.295);
       width: 260px;
-      text-align: justify;
       line-height: 26px;
-      margin-top: 20px;
+      margin-bottom: 15px;
     }
 
     .read_more{
@@ -986,6 +995,12 @@ footer{
       display: flex;
       align-items: flex-start;
       justify-content: space-around;
+    }
+
+    a{
+      display: flex;
+      align-items: center;
+      margin: 0 0 15px 0;
     }
 
     .logo_waxom{
@@ -1017,6 +1032,106 @@ footer{
       display: flex;
       flex-direction: column;
     }
-    
+
+    .contact_item_block{
+      display: flex;
+      flex-direction: column;
+      flex-wrap: wrap;
+    }
+
+    .contact_item_date{
+      font-size: 12px;
+      margin: 10px 0 5px 0;
+      color: rgba(138, 138, 138, 0.295);
+    }
+
+    .contact_item_time{
+      font-size: 12px;
+      margin: 0 0 10px 0;
+      color: rgba(138, 138, 138, 0.295);
+    }
+
+    .text_twitter{
+      margin: 10px 0 5px 0;
+    }
+
+    hr{
+      border: 1px solid rgba(138, 138, 138, 0.171); ;
+    }
+
+    span{
+      color: #00bff3;
+    }
+
+    .widgets{
+      display: flex;
+      max-width: 280px;
+      flex-wrap: wrap ;
+    }
+
+    img{
+      margin: 5px;
+    }
+
+    .contact_item_block:hover{
+
+      .contact_item_date{
+        color:white;
+      }
+
+      p{
+        color:#998675;
+      }
+
+      .contact_item_time{
+        color:white;
+      }
+
+    }
   }
+
+  .end{
+    display: flex;
+    height: 110px;
+    width: 100%;
+    background-color: #111111;
+    justify-content: space-around;
+    align-items: center;
+     
+    .end_block{
+      display: flex;
+      justify-content: space-around;
+      width: 430px;
+    }
+
+    a{
+      text-decoration: none;
+      font-size: 14px;
+      font-family: montserrat, arial, sans-serif;
+      font-weight: 600;
+      color: rgba(192, 192, 192, 0.295);
+      line-height: 26px;
+    }
+
+    p{
+      font-size: 14px;
+      font-family: montserrat, arial, sans-serif;
+      font-weight: 600;
+      color: rgba(192, 192, 192, 0.295);
+      line-height: 26px;
+    }
+    
+    span{
+      color:rgb(139, 139, 139)
+    }
+
+    a:hover{
+      color:#998675;
+      span{
+        color:#998675;
+      }
+    }
+
+  }
+
 }

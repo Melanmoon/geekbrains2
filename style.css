@@ -1130,6 +1130,18 @@ main .posts .posts_item:hover .calendar_bot {
   background-color: #a48d72;
 }
 
+footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
 footer .partners {
   background-image: url(img/mountains.png);
   background-repeat: no-repeat;
@@ -1173,16 +1185,22 @@ footer .contact {
           justify-content: center;
 }
 
+footer .contact h3 {
+  font-family: raleway, arial, sans-serif;
+  font-size: 24px;
+  font-weight: 600;
+  color: white;
+  margin: 20px 0 15px 0;
+}
+
 footer .contact p {
-  font-size: 16px;
+  font-size: 14px;
   font-family: montserrat, arial, sans-serif;
   font-weight: 600;
-  margin-top: 12px;
   color: rgba(192, 192, 192, 0.295);
   width: 260px;
-  text-align: justify;
   line-height: 26px;
-  margin-top: 20px;
+  margin-bottom: 15px;
 }
 
 footer .contact .read_more {
@@ -1204,6 +1222,16 @@ footer .contact .contact_content {
           align-items: flex-start;
   -ms-flex-pack: distribute;
       justify-content: space-around;
+}
+
+footer .contact a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 0 0 15px 0;
 }
 
 footer .contact .logo_waxom {
@@ -1239,5 +1267,118 @@ footer .contact .contact_item {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+}
+
+footer .contact .contact_item_block {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+footer .contact .contact_item_date {
+  font-size: 12px;
+  margin: 10px 0 5px 0;
+  color: rgba(138, 138, 138, 0.295);
+}
+
+footer .contact .contact_item_time {
+  font-size: 12px;
+  margin: 0 0 10px 0;
+  color: rgba(138, 138, 138, 0.295);
+}
+
+footer .contact .text_twitter {
+  margin: 10px 0 5px 0;
+}
+
+footer .contact hr {
+  border: 1px solid rgba(138, 138, 138, 0.171);
+}
+
+footer .contact span {
+  color: #00bff3;
+}
+
+footer .contact .widgets {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  max-width: 280px;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+footer .contact img {
+  margin: 5px;
+}
+
+footer .contact .contact_item_block:hover .contact_item_date {
+  color: white;
+}
+
+footer .contact .contact_item_block:hover p {
+  color: #998675;
+}
+
+footer .contact .contact_item_block:hover .contact_item_time {
+  color: white;
+}
+
+footer .end {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 110px;
+  width: 100%;
+  background-color: #111111;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+footer .end .end_block {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  width: 430px;
+}
+
+footer .end a {
+  text-decoration: none;
+  font-size: 14px;
+  font-family: montserrat, arial, sans-serif;
+  font-weight: 600;
+  color: rgba(192, 192, 192, 0.295);
+  line-height: 26px;
+}
+
+footer .end p {
+  font-size: 14px;
+  font-family: montserrat, arial, sans-serif;
+  font-weight: 600;
+  color: rgba(192, 192, 192, 0.295);
+  line-height: 26px;
+}
+
+footer .end span {
+  color: #8b8b8b;
+}
+
+footer .end a:hover {
+  color: #998675;
+}
+
+footer .end a:hover span {
+  color: #998675;
 }
 /*# sourceMappingURL=style.css.map */
